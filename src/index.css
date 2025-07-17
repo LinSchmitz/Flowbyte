@@ -66,6 +66,128 @@ body {
 }
 
 /*   */
+/* Reset ساده */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background, #f7f9fc);
+  color: var(--color-text, #2e3a59);
+  margin: 0;
+  padding: 0;
+}
+
+/* هدر */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary, #4a90e2);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* محتوای اصلی */
+.main-content {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+/* بخش خلاصه سیکل */
+.cycle-summary {
+  background-color: var(--color-primary-light, #e3f0ff);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.cycle-summary .warning {
+  color: var(--color-warning, #f5a623);
+  font-weight: bold;
+}
+
+/* لیست تسک‌ها */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* کارت تسک */
+.task-card {
+  padding: 1rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.task-card.purple {
+  background-color: #8a2be2;
+}
+
+.task-card.green {
+  background-color: #3cc47c;
+}
+
+.task-card.orange {
+  background-color: #f5a623;
+}
+
+/* دکمه‌ها */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--color-primary, #4a90e2);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-primary-dark, #2c5da3);
+}
+
+/* مودال */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 30, 47, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background-color: var(--color-surface, white);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  background-color: var(--color-error, #f45b69);
+}
 
 /*   */
 
