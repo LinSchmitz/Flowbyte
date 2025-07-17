@@ -2,9 +2,11 @@
 
 :root {
   /* 🌐 Brand / Primary */
-  --color-primary: #4a90e2; /* Main blue (focus, clarity) */
-  --color-primary-light: #e3f0ff; /* Background blue */
-  --color-primary-dark: #2c5da3; /* Darker for buttons or borders */
+  --color-primary: #4f46e5;
+  --color-primary-light: #e0e7ff;
+  --color-primary-dark: #2c5da3;
+  --color-border: #d1d5db;
+  --color-purple: #6a4bcf;
 
   /* ✅ Success */
   --color-success: #3cc47c;
@@ -29,6 +31,26 @@
   --color-background-dark: #1e1e2f;
   --color-surface-dark: #2a2a3f;
   --color-text-dark: #e5e9f0;
+
+  /* Shadows (Neumorphism) */
+  --shadow-light: rgba(255, 255, 255, 0.7);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --box-shadow: 8px 8px 15px var(--shadow-dark),
+    -8px -8px 15px var(--shadow-light);
+  --box-shadow-inset: inset 6px 6px 10px var(--shadow-dark),
+    inset -6px -6px 10px var(--shadow-light);
+
+  /* Border Radius */
+  --border-radius: 12px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* ✅ Global styles */
@@ -41,29 +63,38 @@ body {
 }
 
 .app {
-  width: 70vw;
+  width: 80vw;
   margin: 1.5rem auto;
   padding: 1rem 2rem;
   background-color: var(--color-surface);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  min-height: 80vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
+
+  font-size: 1.2rem;
 }
 
 /* 🧩 Header */
+
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
   font-family: inherit;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
 }
 
 /* 🔖 Logo */
@@ -80,46 +111,22 @@ body {
   color: var(--color-text);
 }
 
-/*   */
-/* Reset ساده */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  margin: 0;
-  padding: 0;
-}
-
-/* هدر */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: center;
-  background-color: var(--color-primary);
-  color: white;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* محتوای اصلی */
+/*  main */
 .main-content {
   width: 100%;
-  padding: 0 1rem;
+  padding: 1rem;
   box-sizing: border-box;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* بخش خلاصه سیکل */
+/*  cycle */
 .cycle-summary {
   background-color: var(--color-primary-light);
   padding: 1rem 1.5rem;
   border-radius: 6px;
   margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
 }
 
 .cycle-summary .warning {
@@ -127,7 +134,7 @@ body {
   font-weight: bold;
 }
 
-/* لیست تسک‌ها */
+/*  tasks list */
 .tasks-list {
   display: flex;
   flex-direction: column;
@@ -135,7 +142,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* کارت تسک */
+/* task card */
 .task-card {
   padding: 1rem;
   border-radius: 6px;
@@ -143,18 +150,21 @@ body {
 }
 
 .task-card.purple {
-  background-color: #6a4bcf; /* انتخاب رنگ بنفش ملایم از روی برند */
+  background-color: var(--color-purple);
+  border-radius: var(--border-radius);
 }
 
 .task-card.green {
   background-color: var(--color-success);
+  border-radius: var(--border-radius);
 }
 
 .task-card.orange {
   background-color: var(--color-warning);
+  border-radius: var(--border-radius);
 }
 
-/* دکمه‌ها */
+/* buttons */
 .buttons {
   display: flex;
   gap: 1rem;
@@ -177,7 +187,7 @@ button:hover {
   background-color: var(--color-primary-dark);
 }
 
-/* مودال */
+/* modal */
 .modal {
   position: fixed;
   top: 0;
@@ -208,13 +218,6 @@ button:hover {
 
 /*   */
 
-/*   */
-
-/*   */
-
-/*   */
-
-/*   */
 /* Responsive*/
 @media (max-width: 768px) {
   .app {
