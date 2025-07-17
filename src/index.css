@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
   /* 🌐 Brand / Primary */
   --color-primary: #4a90e2; /* Main blue (focus, clarity) */
@@ -31,7 +33,7 @@
 
 /* ✅ Global styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--color-background);
   margin: 0;
   padding: 0;
@@ -46,7 +48,7 @@ body {
   padding: 12px 20px;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: inherit;
 }
 
 /* 🔖 Logo */
