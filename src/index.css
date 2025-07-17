@@ -40,6 +40,21 @@ body {
   color: var(--color-text);
 }
 
+.app {
+  width: 70vw;
+  margin: 1.5rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
 /* 🧩 Header */
 .header {
   display: flex;
@@ -73,8 +88,8 @@ body {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--color-background, #f7f9fc);
-  color: var(--color-text, #2e3a59);
+  background-color: var(--color-background);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
 }
@@ -82,9 +97,10 @@ body {
 /* هدر */
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background-color: var(--color-primary, #4a90e2);
+  align-items: center;
+  background-color: var(--color-primary);
   color: white;
   padding: 1rem 2rem;
   font-weight: bold;
@@ -93,21 +109,21 @@ body {
 
 /* محتوای اصلی */
 .main-content {
-  max-width: 800px;
-  margin: 1rem auto;
+  width: 100%;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* بخش خلاصه سیکل */
 .cycle-summary {
-  background-color: var(--color-primary-light, #e3f0ff);
+  background-color: var(--color-primary-light);
   padding: 1rem 1.5rem;
   border-radius: 6px;
   margin-bottom: 1.5rem;
 }
 
 .cycle-summary .warning {
-  color: var(--color-warning, #f5a623);
+  color: var(--color-warning);
   font-weight: bold;
 }
 
@@ -123,19 +139,19 @@ body {
 .task-card {
   padding: 1rem;
   border-radius: 6px;
-  color: white;
+  color: var(--color-surface);
 }
 
 .task-card.purple {
-  background-color: #8a2be2;
+  background-color: #6a4bcf; /* انتخاب رنگ بنفش ملایم از روی برند */
 }
 
 .task-card.green {
-  background-color: #3cc47c;
+  background-color: var(--color-success);
 }
 
 .task-card.orange {
-  background-color: #f5a623;
+  background-color: var(--color-warning);
 }
 
 /* دکمه‌ها */
@@ -152,13 +168,13 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  background-color: var(--color-primary, #4a90e2);
+  background-color: var(--color-primary);
   color: white;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--color-primary-dark, #2c5da3);
+  background-color: var(--color-primary-dark);
 }
 
 /* مودال */
@@ -176,7 +192,7 @@ button:hover {
 }
 
 .modal-content {
-  background-color: var(--color-surface, white);
+  background-color: var(--color-surface);
   padding: 2rem;
   border-radius: 8px;
   width: 300px;
@@ -186,7 +202,8 @@ button:hover {
 
 .modal-content button {
   margin-top: 1rem;
-  background-color: var(--color-error, #f45b69);
+  background-color: var(--color-error);
+  color: white;
 }
 
 /*   */
@@ -198,3 +215,14 @@ button:hover {
 /*   */
 
 /*   */
+/* Responsive*/
+@media (max-width: 768px) {
+  .app {
+    max-width: 95vw;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
