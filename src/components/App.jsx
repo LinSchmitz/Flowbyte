@@ -8,7 +8,6 @@ function App() {
     <div className="app">
       <Header />
       <Dashboard />
-      {/* باقی صفحات اینجا */}
     </div>
   );
 }
