@@ -21,13 +21,15 @@ function SideBar() {
 
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
-      <button className="toggle-btn" onClick={setIsOpen}>
+      <button className="toggle-btn" onClick={() => setIsOpen(prev => !prev)}>
         {isOpen ? '⏪' : '⏩'}
       </button>
+
       {isOpen ? (
         <ul>
-          <li>📊 Overview</li>
-          <li>✅ Tasks</li>
+          <li>✅ Create Circle</li>
+          <li>📃 Edit Circle</li>
+          <li>📊 Analyze</li>
           <li>⚙️ Settings</li>
         </ul>
       ) : (
