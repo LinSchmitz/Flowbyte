@@ -15,6 +15,7 @@ export default function App() {
           <main className="main-content">
             <Routes>
               <Route path="/create-circle" element={<CreateCircle />} />
+              <Route path="/edit-circle" element={<EditCircle />} />
               <Route path="/create-user" element={<CreateUser />} />
               <Route path="/analyze" element={<Analyze />} />
               <Route path="/settings" element={<Settings />} />
@@ -36,6 +37,9 @@ function CreateCircle() {
   return <h2>Create Circle Page</h2>;
 }
 
+function EditCircle() {
+  return <h2>Edit Circle Page</h2>;
+}
 function CreateUser() {
   return <h2>Create User Page</h2>;
 }
