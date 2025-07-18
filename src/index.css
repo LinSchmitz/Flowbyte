@@ -127,6 +127,11 @@ body {
 }
 
 /* Sidebar styles */
+a {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+
 .sidebar {
   background-color: var(--color-surface-dark);
   color: var(--color-text-dark);
@@ -161,11 +166,13 @@ body {
   padding: 0;
   gap: 2rem;
   width: 100%;
+  text-decoration: none;
 }
 
 .sidebar li {
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .sidebar li:last-child {
