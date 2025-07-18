@@ -3,13 +3,16 @@ import React from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
 
-function App() {
+export default function App() {
   return (
     <div className="app">
       <Header />
       <Dashboard />
+      <Footer />
     </div>
   );
 }
 
-export default App;
+function Footer() {
+  return <footer>footer</footer>;
+}
