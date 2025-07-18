@@ -109,6 +109,14 @@ body {
   color: var(--color-text);
 }
 
+/* Layout wrapper for Sidebar + Main content */
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1; /* Allow it to grow */
+}
+
 /*  main */
 .main-content {
   width: 100%;
@@ -116,6 +124,25 @@ body {
   box-sizing: border-box;
   border-radius: var(--border-radius);
   background-color: var(--color-background);
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  min-width: 180px;
+  background-color: var(--color-surface-dark);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  color: var(--color-text-dark);
+  box-shadow: var(--box-shadow);
+}
+
+/* Dashboard or main content */
+.dashboard {
+  flex: 1;
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-radius: var(--border-radius);
 }
 
 /*  cycle */
