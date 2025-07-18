@@ -7,10 +7,15 @@ export default function App() {
   return (
     <div className="app">
       <Header />
+      <SideBar />
       <Dashboard />
       <Footer />
     </div>
   );
+}
+
+function SideBar() {
+  return <div>SideBar</div>;
 }
 
 function Footer() {
