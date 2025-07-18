@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
+import Footer from './Footer';
 
 export default function App() {
   return (
@@ -41,8 +42,4 @@ function SideBar() {
       )}
     </div>
   );
-}
-
-function Footer() {
-  return <footer>footer</footer>;
 }
