@@ -1,8 +1,9 @@
 // src/App.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Footer from './Footer';
+import { SideBar } from './SideBar';
 
 export default function App() {
   return (
@@ -13,34 +14,6 @@ export default function App() {
         <Dashboard />
       </div>
       <Footer />
-    </div>
-  );
-}
-
-function SideBar() {
-  const [isOpen, setIsOpen] = useState(true);
-
-  return (
-    <div className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
-      <button className="toggle-btn" onClick={() => setIsOpen(prev => !prev)}>
-        {isOpen ? '⬅️' : '➡️'}
-      </button>
-
-      {isOpen ? (
-        <ul>
-          <li>✅ Create Circle</li>
-          <li>📃 Edit Circle</li>
-          <li>📊 Analyze</li>
-          <li>⚙️ Settings</li>
-        </ul>
-      ) : (
-        <ul>
-          <li title="CCircle">✅</li>
-          <li title="ECircle">📃</li>
-          <li title="Analyze">📊</li>
-          <li title="Settings">⚙️</li>
-        </ul>
-      )}
     </div>
   );
 }
