@@ -1,25 +1,9 @@
-// src/App.jsx
 import React from 'react';
 import Header from './Header';
-import Dashboard from './Dashboard';
+import Analyze from './Analyze';
 import Footer from './Footer';
-import { SideBar } from './SideBar';
+import SideBar from './SideBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-// export default function App() {
-//   return (
-//     <BrowserRouter>
-//       <div className="app">
-//         <Header />
-//         <div className="main-layout">
-//           <SideBar />
-//           <Dashboard />
-//         </div>
-//         <Footer />
-//       </div>
-//     </BrowserRouter>
-//   );
-// }
 
 export default function App() {
   return (
@@ -54,10 +38,6 @@ function CreateCircle() {
 
 function CreateUser() {
   return <h2>Create User Page</h2>;
-}
-
-function Analyze() {
-  return <h2>Analyze Page</h2>;
 }
 
 function Settings() {

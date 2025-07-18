@@ -32,7 +32,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export function SideBar() {
+export default function SideBar() {
   const [isOpen, setIsOpen] = useState(true);
 
   return (

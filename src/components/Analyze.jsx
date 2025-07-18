@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Dashboard() {
+export default function Analyze() {
   const [showAddTaskModal, setShowAddTaskModal] = useState(false);
 
   return (
