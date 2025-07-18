@@ -35,8 +35,9 @@ function SideBar() {
         </ul>
       ) : (
         <ul>
-          <li title="Overview">📊</li>
-          <li title="Tasks">✅</li>
+          <li title="CCircle">✅</li>
+          <li title="ECircle">📃</li>
+          <li title="Analyze">📊</li>
           <li title="Settings">⚙️</li>
         </ul>
       )}
