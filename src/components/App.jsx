@@ -22,7 +22,7 @@ function SideBar() {
   return (
     <div className={`sidebar ${isOpen ? 'open' : 'collapsed'}`}>
       <button className="toggle-btn" onClick={() => setIsOpen(prev => !prev)}>
-        {isOpen ? '⏪' : '⏩'}
+        {isOpen ? '⬅️' : '➡️'}
       </button>
 
       {isOpen ? (
