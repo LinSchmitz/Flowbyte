@@ -99,7 +99,6 @@ body {
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--color-text);
 }
 
 /* 👤 Profile Icon */
@@ -130,6 +129,10 @@ body {
 a {
   text-decoration: none;
   color: var(--color-text-dark);
+}
+
+.logo a {
+  color: var(--color-text);
 }
 
 .sidebar {

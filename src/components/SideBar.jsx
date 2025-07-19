@@ -47,9 +47,7 @@ export default function SideBar() {
         <li>
           <Link to="/contribution">📃 {isOpen && 'Edit Circle'}</Link>
         </li>
-        <li>
-          <Link to="/create-user">👤 {isOpen && 'Create User'}</Link>
-        </li>
+
         <li>
           <Link to="/analyze">📊 {isOpen && 'Analyze'}</Link>
         </li>
