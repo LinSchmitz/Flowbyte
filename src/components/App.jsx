@@ -14,16 +14,13 @@ export default function App() {
           <SideBar />
           <main className="main-content">
             <Routes>
+              <Route path="/" element={<Analyze />} />
+              <Route path="/analyze" element={<Analyze />} />
               <Route path="/create-circle" element={<CreateCircle />} />
               <Route path="/edit-circle" element={<EditCircle />} />
               <Route path="/create-user" element={<CreateUser />} />
-              <Route path="/analyze" element={<Analyze />} />
               <Route path="/settings" element={<Settings />} />
-              {/* You can add a default route */}
-              <Route
-                path="*"
-                element={<h2>Welcome! Please select a page.</h2>}
-              />
+              <Route path="*" element={<h2>404 Page not found.</h2>} />
             </Routes>
           </main>
         </div>
