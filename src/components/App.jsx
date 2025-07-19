@@ -4,6 +4,7 @@ import Analyze from './Analyze';
 import Footer from './Footer';
 import SideBar from './SideBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { CreateCircle } from './CreateCircle';
 
 export default function App() {
   return (
@@ -28,10 +29,6 @@ export default function App() {
       </div>
     </BrowserRouter>
   );
-}
-
-function CreateCircle() {
-  return <h2>Create Circle Page</h2>;
 }
 
 function EditCircle() {
