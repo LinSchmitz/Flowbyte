@@ -5,6 +5,7 @@ import Footer from './Footer';
 import SideBar from './SideBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CreateCircle from './CreateCircle';
+import ContributionGrid from './ContributionGrid';
 
 export default function App() {
   return (
@@ -18,9 +19,11 @@ export default function App() {
               <Route path="/" element={<Analyze />} />
               <Route path="/analyze" element={<Analyze />} />
               <Route path="/create-circle" element={<CreateCircle />} />
-              <Route path="/edit-circle" element={<EditCircle />} />
+              {/* <Route path="/edit-circle" element={<EditCircle />} /> */}
+              <Route path="/contribution" element={<ContributionGrid />} />
               <Route path="/create-user" element={<CreateUser />} />
               <Route path="/settings" element={<Settings />} />
+
               <Route path="*" element={<h2>404 Page not found.</h2>} />
             </Routes>
           </main>

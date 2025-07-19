@@ -45,7 +45,7 @@ export default function SideBar() {
           <Link to="/create-circle">✅ {isOpen && 'Create Circle'}</Link>
         </li>
         <li>
-          <Link to="/edit-circle">📃 {isOpen && 'Edit Circle'}</Link>
+          <Link to="/contribution">📃 {isOpen && 'Edit Circle'}</Link>
         </li>
         <li>
           <Link to="/create-user">👤 {isOpen && 'Create User'}</Link>

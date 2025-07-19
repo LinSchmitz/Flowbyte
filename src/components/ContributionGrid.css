@@ -1,0 +1,26 @@
+.grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.grid-row {
+  display: flex;
+  gap: 4px;
+}
+
+.grid-cell {
+  width: 14px;
+  height: 14px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.grid-cell.active {
+  background-color: #2ecc71; /* Green like GitHub */
+}
