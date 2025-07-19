@@ -3,7 +3,7 @@ import './ContributionGrid.css';
 
 const ContributionGrid = () => {
   const rows = 7;
-  const cols = 20;
+  const cols = 35;
   const [grid, setGrid] = useState(
     Array(rows)
       .fill()

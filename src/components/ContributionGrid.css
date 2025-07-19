@@ -1,7 +1,7 @@
 .grid-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
@@ -9,7 +9,7 @@
 
 .grid-row {
   display: flex;
-  gap: 4px;
+  gap: 5px;
 }
 
 .grid-cell {
@@ -22,5 +22,5 @@
 }
 
 .grid-cell.active {
-  background-color: #2ecc71; /* Green like GitHub */
+  background-color: var(--color-success);
 }
