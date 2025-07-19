@@ -1,108 +1,92 @@
 import React, { useState } from 'react';
 
-export function CreateCircle() {
-  const [title, setTitle] = useState('Focus Sprint – August');
-  const [startDate, setStartDate] = useState('2025-08-01');
-  const [durationUnit, setDurationUnit] = useState('week'); // "week" or "month"
-  const [duration, setDuration] = useState(3);
+export default function CreateCircle() {
+  const [title, setTitle] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [durationUnit, setDurationUnit] = useState('week');
+  const [durationValue, setDurationValue] = useState(1);
   const [importTasks, setImportTasks] = useState(false);
 
   const handleSubmit = e => {
     e.preventDefault();
-    const newCycle = {
+    console.log({
       title,
       startDate,
-      durationUnit,
-      duration,
+      duration: `${durationValue} ${durationUnit}`,
       importTasks,
-    };
-    console.log('Creating Cycle:', newCycle);
-    // Add your API or state logic here
+    });
+    alert('Cycle created!');
   };
 
   return (
-    <div className="main-content p-6 max-w-xl mx-auto text-gray-800">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-xl p-6 space-y-6"
-      >
-        <h2 className="text-2xl font-bold border-b pb-2">
-          📦 Create New Cycle
-        </h2>
-
-        {/* Title */}
-        <div>
-          <label className="block font-medium text-lg mb-1">📝 Title:</label>
+    <div className="create-circle-container">
+      <h2 className="section-title"> Create New Cycle</h2>
+      <form className="create-circle-form" onSubmit={handleSubmit}>
+        <label>
+          Title:
           <input
             type="text"
             value={title}
             onChange={e => setTitle(e.target.value)}
-            className="w-full border rounded p-2 text-base"
-            placeholder="Enter cycle title"
+            placeholder="Focus Sprint – August"
           />
-        </div>
+        </label>
 
-        {/* Start Date */}
-        <div>
-          <label className="block font-medium text-lg mb-1">
-            📆 Start Date:
-          </label>
+        <label>
+          Start Date:
           <input
             type="date"
             value={startDate}
             onChange={e => setStartDate(e.target.value)}
-            className="w-full border rounded p-2 text-base"
           />
-        </div>
+        </label>
 
-        {/* Duration Toggle */}
-        <div>
-          <label className="block font-medium text-lg mb-1">📐 Duration:</label>
-          <div className="flex items-center space-x-4 mb-2">
-            <label className="flex items-center space-x-1">
+        <div className="duration-group">
+          <span className="duration-label">Duration:</span>
+          <div className="duration-toggle">
+            <label>
               <input
                 type="radio"
+                value="week"
                 checked={durationUnit === 'week'}
                 onChange={() => setDurationUnit('week')}
               />
-              <span>Week</span>
+              Week
             </label>
-            <label className="flex items-center space-x-1">
+
+            <label>
               <input
                 type="radio"
+                value="month"
                 checked={durationUnit === 'month'}
                 onChange={() => setDurationUnit('month')}
               />
-              <span>Month</span>
+              Month
             </label>
+
+            <input
+              type="number"
+              min="1"
+              value={durationValue}
+              onChange={e => setDurationValue(e.target.value)}
+            />
           </div>
-          <input
-            type="number"
-            min={1}
-            value={duration}
-            onChange={e => setDuration(Number(e.target.value))}
-            className="w-full border rounded p-2 text-base"
-            placeholder="e.g. 3"
-          />
         </div>
 
-        {/* Import Previous Tasks */}
-        <div className="flex items-center space-x-2">
+        <label className="import-checkbox">
           <input
             type="checkbox"
             checked={importTasks}
-            onChange={e => setImportTasks(e.target.checked)}
+            onChange={() => setImportTasks(!importTasks)}
           />
-          <span className="text-base">Import tasks from previous cycle?</span>
-        </div>
+          Import tasks from previous cycle?
+        </label>
 
-        {/* Submit */}
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Create Cycle
-        </button>
+        <div className="button-wrapper">
+          <button type="submit" className="create-button">
+            Create Cycle
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -4,7 +4,7 @@ import Analyze from './Analyze';
 import Footer from './Footer';
 import SideBar from './SideBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { CreateCircle } from './CreateCircle';
+import CreateCircle from './CreateCircle';
 
 export default function App() {
   return (
