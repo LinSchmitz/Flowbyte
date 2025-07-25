@@ -8,7 +8,7 @@ export default function Header() {
       <div className="logo">
         <Link to="/"> 📊 Flowbyte</Link>
       </div>
-      <h4>Success doesn't come from intensity — it comes from consistency.</h4>
+      <h4>Success doesn't come from intensity, it comes from consistency.</h4>
       <div className="profile-icon">👤</div>
     </header>
   );
